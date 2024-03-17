@@ -1,0 +1,24 @@
+ALGORITHM isleapyear (year)
+VAR
+    year : INTEGER
+BEGIN
+    IF ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) THEN
+        return true
+    ELSE
+        return false
+    END_IF
+    return isleapyear()
+END
+
+ALGORITHM ticketPricing (age, ticketPrice)
+VAR
+    ticketPrice, age : INTEGER
+BEGIN
+    IF (age <= 12) THEN
+        ticketPrice = 10
+    ELSE_IF (age >= 13 && age <= 17 ) THEN
+        ticketPrice = 15
+    ELSE
+        ticketPrice = 15
+    END_IF
+END
